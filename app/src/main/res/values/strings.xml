@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music Player</string>
+
+    <!-- DataBase Name And Version -->
+    <string name="DataBaseName_Version">1</string>
+    <string name="DataBaseName">MusicPlayer</string>
+
+    <string name="drawer_open">open drawer</string>
+    <string name="drawer_close">close drawer</string>
+
+
+    <string-array name="drawer">
+        <item>All Songs</item>
+        <item>My Library</item>
+        <item>Favorite</item>
+        <!-- after divider -->
+        <item>Settings</item>
+    </string-array>
+
+    <string name="design">Design</string>
+    <string name="develop">Develop</string>
+
+    <array name="drawerIcons">
+        <item>@drawable/ic_allsongs</item>
+        <item>@drawable/ic_library_music</item>
+        <item>@drawable/ic_favorite</item>
+        <!-- after divider -->
+        <item>@drawable/ic_settings</item>
+        <item>@drawable/ic_equalizer</item>
+        <item>@drawable/ic_content_send</item>
+    </array>
+
+    <string name="enabled">Enabled</string>
+    <string name="flat">Flat</string>
+    <string name="bass_boost">Bass boost</string>
+    <string name="about">About...</string>
+    <string name="ok">OK</string>
+
+</resources>
