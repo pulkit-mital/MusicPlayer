@@ -61,14 +61,19 @@ public class MusicPlayerService extends Service implements AudioManager.OnAudioF
                 @Override
                 public void onCallStateChanged(int state, String incomingNumber) {
                     if (state == TelephonyManager.CALL_STATE_RINGING) {
-                        if (MediaController.getInstance().isPlayingAudio(MediaController.getInstance().getPlayingSongDetail())
+                        if (!MediaController.getInstance().isPlayingAudio(MediaController.getInstance().getPlayingSongDetail())
                                 && !MediaController.getInstance().isAudioPaused()) {
                             MediaController.getInstance().pauseAudio(MediaController.getInstance().getPlayingSongDetail());
                         }
                     } else if (state == TelephonyManager.CALL_STATE_IDLE) {
-
+                        if(MediaController.getInstance().isAudioPaused()){
+                            MediaController.getInstance().resumeAudio(MediaController.getInstance().getPlayingSongDetail());
+                        }
                     } else if (state == TelephonyManager.CALL_STATE_OFFHOOK) {
-
+                        if (!MediaController.getInstance().isPlayingAudio(MediaController.getInstance().getPlayingSongDetail())
+                                && !MediaController.getInstance().isAudioPaused()) {
+                            MediaController.getInstance().pauseAudio(MediaController.getInstance().getPlayingSongDetail());
+                        }
                     }
                     super.onCallStateChanged(state, incomingNumber);
                 }
