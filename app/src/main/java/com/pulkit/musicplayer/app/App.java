@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.crashlytics.android.Crashlytics;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -16,6 +17,8 @@ import com.pulkit.musicplayer.data.MusicPlayerDBHelper;
 import com.pulkit.musicplayer.pojo.SongDetail;
 
 import java.util.ArrayList;
+
+import io.fabric.sdk.android.Fabric;
 
 /**
  * @author PULKIT MITAL
@@ -50,6 +53,7 @@ public class App extends Application {
          * Imageloader initialize
 		 */
         initImageLoader(applicationContext);
+        Fabric.with(this,new Crashlytics());
     }
 
     @Override

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Music Player</string>
+    <string name="app_name">Sonorous</string>
 
     <!-- DataBase Name And Version -->
     <string name="DataBaseName_Version">1</string>
-    <string name="DataBaseName">MusicPlayer</string>
+    <string name="DataBaseName">Sonorous</string>
 
     <string name="drawer_open">open drawer</string>
     <string name="drawer_close">close drawer</string>

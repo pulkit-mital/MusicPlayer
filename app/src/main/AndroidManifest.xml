@@ -115,6 +115,9 @@
             </intent-filter>
         </receiver>
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="01435911c6b336b89b21bbf95dbf1cc0087e3f40" />
     </application>
 
 </manifest>
